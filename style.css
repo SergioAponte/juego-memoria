@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+    height: 100%;
+    width: 100%;
+    -webkit-text-stroke-width: 1px 2px 1px;
+    background-color: rgb(147, 2, 147);
+    color: white;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+
+}
+.container_board{
+    width: 70%;
+    height: 70%;
+    border: 1px solid;
+    display: grid;
+    grid-template-areas: 
+    'titulo titulo'
+    'fichas mensajes';
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 15% 75%;
+}
+h1{
+    grid-area:titulo;
+    text-align: center;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+.board_fichas{
+    grid-area: fichas;
+    /* border: solid 1px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 0.1%;
+    gap: 0.5%;
+}
+.board_announces{
+    grid-area: mensajes;
+    /* border: solid 1px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1.5%;
+    gap: 1%;
+}
+
+.board_announces div{
+    height: 25%;
+    /* border: solid 1px; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.boton_reiniciar{
+    height: 25%;
+    width: 100%;
+}
+.reiniciar_btn{
+    height: 50%;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.btn_ficha{
+    height: 24%;
+    width: 24%;
+
+}
+.board_announces div:nth-child(-n+3){
+    border: 1px solid;
+    border-radius: 10px;
+}
